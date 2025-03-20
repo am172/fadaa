@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap');
+
+
+/* .container {
+    font-family: "Baloo Bhaijaan 2", serif;
+    padding: 110px;
+    direction: rtl;
+    text-align: center;
+} */
+
+
+
+.houseContainer {
+    width: 100%;
+    margin-bottom: 28px;
+    padding: 33px;
+    border: 1px solid #1f6feb33;
+    border-radius: 8px;
+    background-color: #eee;
+}
+
+/* .title {
+    font-size: 2rem;
+    color: #000000;
+    font-weight: bold;
+} */
+
+/* .date {
+    font-size: 1.2rem;
+    color: #606770;
+} */
+
+.house {
+    font-size: 25px;
+    color: #000000;
+    margin-bottom: 10px;
+    font-family: "Baloo Bhaijaan 2", serif;
+
+}
+
+#attendand {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+select{
+    padding: 2px;
+    margin-top: 9px;
+    height: 5vh;
+    background: #1e1e2f;
+    color: white;
+    font-size: 19px;
+    border-radius: 5px;
+    margin-bottom: 0;
+    width: 70%;
+    margin-right: 179px;
+}
+
+#attendand .th {
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+#attendand .td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+        padding: 4px;
+}
+
+.passwordCard {
+    margin: 20px auto;
+    width: 350px;
+    padding: 25px;
+    color: #000000;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    animation: slideIn 0.6s ease-out;
+}
+.passwordCard input {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 15px;
+    /* background: #d8d8d8; */
+    border: 1.2px solid #44444463;
+    color: #000000;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.passwordCard input:focus {
+    border-color: #795bca;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.passwordCard.hide {
+    opacity: 0;
+    pointer-events: none; /* إخفاء البطاقة عند تغيير كلمة السر */
+}
+
+.passwordChangeForm {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.errorMessage {
+    color: red;
+    margin-top: 10px;
+}
+
+.successMessage {
+    color: green;
+    margin-top: 10px;
+}
+
+/* تنسيق السايد بار */
+.sidebar {
+    width: 170px;
+    height: 100vh; /* عرض السايد بار بكامل ارتفاع الصفحة */
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* تنسيق الروابط داخل السايد بار */
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* تأثير التمرير على الروابط */
+.sidebar a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* تنسيق زر تسجيل الخروج */
+.sidebar button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* تأثير التمرير على زر تسجيل الخروج */
+.sidebar button:hover {
+    background-color: #d32f2f;
+}
+
+#change_password{
+    border: #c82333 solid 1px;
+    width: 80%;
+    background: #f0f0f0;
+    text-align: center;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.80);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-right: -96%;
+    margin-left: 34px;
+    margin-bottom: 400px;
+    }
+
+/* RESPONSIVE */
+/* أجهزة اللابتوب الصغيرة والأجهزة اللوحية الكبيرة */
+@media (max-width: 900px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+        background: none;
+        box-shadow: none;
+    }
+
+    .password-card {
+        max-width: 100%;
+        margin-right: 0;
+    }
+    table th, table td {
+       
+        padding-left: 0px;
+        font-size: 0.7rem;
+    }
+
+    #stuts {
+        font-size: 1.2rem;
+        width: 155%;
+    }
+}
+
+/* الأجهزة اللوحية والمتوسطة */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    .table-container{
+
+    }
+
+    .password-card {
+        width: 517px;
+    }
+
+    table {
+        width: 96%;
+    }
+    table th, table td {
+        padding: 8px;
+        padding-left: 171px;
+        font-size: 0.9rem;
+    }
+
+    #stuts {
+        font-size: 1.2rem;
+        width: 257%;
+    }
+}
+
+/* الهواتف الذكية */
+@media (max-width: 550px) {
+    .container {
+        width: 87%;
+        padding: 24px;
+        margin-left: -77px;
+        box-shadow: none;
+        background: none;
+    
+    }
+    .table-container{
+        width: 100%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+    .password-card{
+        width: 84%;
+        box-shadow: none;
+    }
+
+    .password-card input {
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        font-size: 0.9rem;
+    }
+
+    table th, table td {
+        padding-left: 0px;
+        font-size: 10px;
+    }
+
+    #stuts {
+        font-size: 1.2rem;
+        width: 155%;
+    }
+    select{
+        margin-top: 69px;
+        height: 3vh;
+        background: #1e1e2f;
+        color: white;
+        font-size: 11px;
+        border-radius: 5px;
+        margin-bottom: 0;
+        width: 70%;
+        margin-right: 7px;
+    }
+    .houseContainer{
+        width: 81%;
+    margin-bottom: 28px;
+    /* padding: 14px; */
+    border: 1px solid #1f6feb33;
+    border-radius: 8px;
+    background-color: #eee;
+    }
+    #attendand{
+        width: 116%;
+    border-collapse: collapse;
+    margin-right: -25px;
+    }
+    #change_password{
+    border: #c82333 solid 1px;
+    width: 61%;
+    background: #f0f0f0;
+    text-align: center;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.80);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-right: -96%;
+    margin-left: 34px;
+    margin-bottom: 400px;
+    }
+}

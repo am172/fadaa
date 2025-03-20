@@ -1,0 +1,97 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Arima:wght@100..700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');.login-container { */
+
+/* تنسيق عام للصفحة */
+body {
+    font-family: "Alexandria", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    direction: rtl;
+    color: rgb(0, 0, 0);
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* تحسين عرض الإحصائيات */
+.hh{
+margin-top: 155px;
+margin-bottom: 31px;
+}
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.stats div {
+    background: linear-gradient(to right, #4f46e5, #3b82f6);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* لون البوردر الأسود في الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    border: 2px solid black;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* تحسين شكل الفلاتر */
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filters input, .filters select {
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+
+/* الأجهزة اللوحية والمتوسطة */
+@media (max-width: 768px) {
+   
+}
+
+/* الهواتف الذكية */
+@media (max-width: 550px) {
+    .p-2 {
+        padding: .1rem;
+    }
+}

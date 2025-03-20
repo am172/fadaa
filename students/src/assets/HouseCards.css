@@ -1,0 +1,81 @@
+/* ضبط الحاوية */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* العنوان */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* الشبكة */
+.houses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* عرض 3 بطاقات جنب بعض */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* عند الشاشات المتوسطة (أقل من 900px) - بطاقتين في كل صف */
+@media (max-width: 900px) {
+    .houses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* عند الشاشات الصغيرة (أقل من 600px) - بطاقة واحدة في كل صف */
+@media (max-width: 600px) {
+    .houses-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* تصميم البطاقة */
+.house-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.house-card:hover {
+    transform: scale(1.03);
+}
+
+/* اسم المنزل */
+.house-card h2 {
+    font-size: 20px;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+/* اسم المشرف */
+.house-card p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* قائمة الطلاب */
+.students-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: right;
+}
+
+.students-list li {
+    background: #f8f8f8;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}

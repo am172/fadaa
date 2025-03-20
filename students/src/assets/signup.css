@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Arima:wght@100..700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+.container_signup {
+    display: flex;
+    justify-content: space-between;
+    height: 89vh;
+    padding: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 31px;
+    background-color: #eee;
+    padding: 0;
+    /* width: 111vh; */
+    direction: rtl;
+    border-radius: 23px;
+    font-family: "Alexandria", sans-serif;
+    box-shadow: 0 11px 29px #2d3e50c2;
+
+}
+
+#welcome-message {
+    width: 40%;
+    background-color: #2d3e50;
+    color: #fff;
+    padding: 30px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 28px;
+    border-top-right-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message h2 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.welcome-message p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.role-selection {
+    display: flex;
+    gap: 15px;
+}
+
+.role-button {
+    background-color: #4caf50;
+    color: #ecf0f1;
+    font-size: 20px;
+    padding: 6px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2)
+}
+
+.role-button:hover {
+    background-color: #45a049;
+}
+
+.signup-form {
+    width: 60%;
+    background-color: #eee;
+    padding: 30px;
+    /* border-radius: 10px; */
+    display: flex;
+    margin-bottom: 39px;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom-left-radius: 28px;
+    border-top-left-radius: 28px;
+    margin-bottom: 110px;
+}
+
+.signup-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 6px 26px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a04900;
+    border: 1px solid;
+    color: #45a049;
+}
+
+.link-btn {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    border: solid;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+
+.link-btn:hover {
+    background-color: #45a049;
+}
+
+.show-password-btn {
+    font-size: 14px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background-color: #16a085;
+    border: none;
+    color: #eee;
+    padding-right: 16px;
+}
+
+form{
+    margin-top: 95px;
+}
+.sa7by{
+    margin-top:150px
+}
+.sa7by2{
+    display: none;
+}
+.sa7by2 .link-btn{
+    color: #2d3e50;
+}
+
+/* الأجهزة اللوحية والمتوسطة */
+@media (max-width: 768px) {
+    
+}
+
+/* الهواتف الذكية */
+@media (max-width: 550px) {
+    .container_signup {
+        margin: 18px;
+        /* margin-left: 17px; */
+        /* margin-right: 7px; */
+        display: block;
+        height: 139vh;
+    }
+    #welcome-message{
+        width: 100%;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 25px;
+    }
+
+    #welcome-message h2{
+        /* margin-bottom: -24px; */
+    }
+
+    .signup-form{
+        width: 90%;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+
+    .show-password-btn{
+        margin-top: 10px;
+    }
+    .link-btn{
+        font-size: 10px;
+    }
+    input{
+        margin-bottom: -9px;
+    }
+    .sa7by{
+        display: none;
+    }
+    .sa7by2{
+        display: block;
+        padding: 20px;
+    }
+    form{
+        margin-top: 0px;
+    }
+    #submit{
+        width: 100%;
+        margin-right: 15px;
+    }
+}

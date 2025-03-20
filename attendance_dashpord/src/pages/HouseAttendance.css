@@ -1,0 +1,35 @@
+.house-attendance-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.password-card {
+    margin-bottom: 20px;
+}
+
+.students-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.students-list li {
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.students-list li:hover {
+    background-color: #d0d0d0;
+}
+
+.student-details {
+    margin-top: 20px;
+}
+
+.attendance-percentage {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}

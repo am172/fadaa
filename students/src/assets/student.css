@@ -1,0 +1,84 @@
+/* النافبار */
+.top-navbar {
+    width: 100%;
+    background: #1a2a3a; /* لون أزرق داكن */
+    color: white;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* لوجو الجمعية */
+.navbar-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; /* لون أبيض */
+}
+
+/* قوائم النافبار */
+.navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.navbar-links li {
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0; /* مربع بدون حواف مستديرة */
+    transition: all 0.3s ease;
+    color: white; /* لون النص أبيض */
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-links li:hover {
+    background: #1abc9c; /* لون أخضر فاتح عند الـ hover */
+    color: white; /* لون النص أبيض */
+}
+
+/* أيقونة القائمة */
+.menu-icon {
+    display: none; /* مخفية في الشاشات الكبيرة */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.content{
+    margin-top: 73px;
+    padding: 24px;
+}
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* إخفاء القائمة في الشاشات الصغيرة */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* علشان تظهر تحت النافبار */
+        left: 0;
+        background: #1a2a3a; /* لون خلفية القائمة */
+    }
+
+    .navbar-links.active {
+        display: flex; /* إظهار القائمة لما تكون مفتوحة */
+    }
+
+    .menu-icon {
+        display: block; /* إظهار أيقونة القائمة في الشاشات الصغيرة */
+    }
+}

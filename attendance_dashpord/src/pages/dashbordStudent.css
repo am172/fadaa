@@ -1,0 +1,158 @@
+
+.hh{
+margin-top: 155px;
+margin-bottom: 31px;
+}
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.stats div {
+    background: linear-gradient(to right, #4f46e5, #3b82f6);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filters input, .filters select {
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.filters input{
+    height: 10px;
+    margin-top: 18px;
+    background: #d7d4de73;
+}
+
+#btn__edit{
+color: #33f975af;
+}
+#btn__delete{
+    color: red;
+}
+
+#btn__edit,#btn__delete{
+    background-color: #3b83f600;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* تنسيق عنوان تعديل بيانات الطالب */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+
+
+.modal {
+    border: #c82333 solid 1px;
+    width: 56%;
+    background: #f0f0f0;
+    text-align: center;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.80);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-right: 20%;
+    transform: translateY(-788px);
+}
+
+#edit__value {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+
+#edit__value:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+button:nth-of-type(2) {
+    background-color: #dc3545;
+}
+
+
+button:nth-of-type(2):hover {
+    background-color: #c82333;
+}
+
+
+
+/* RESPONSIVE  */
+@media (max-width: 900px) {
+
+}
+
+/* الأجهزة اللوحية والمتوسطة */
+@media (max-width: 768px) {
+}
+
+/* الهواتف الذكية */
+@media (max-width: 550px) {
+    #btn__edit, #btn__delete{
+        padding: 0;
+        font-size: 11px;
+    }
+
+    .filters input, .filters select{
+        font-size: 13px;
+        padding: 0;
+        
+    
+    }
+    .filters input{
+        height: 10px;
+        margin-top: 76px;
+        margin-right: 5px;
+        background: #d7d4de73;
+    }
+    .modal{
+        margin-top: 242px;
+    }
+    .stats div{
+        margin: 20px;
+    }
+}

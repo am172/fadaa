@@ -1,0 +1,107 @@
+/* تنسيق الصفحة الرئيسية */
+.attendance-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f9;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* تنسيق العنوان */
+.page-title {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* تنسيق نموذج إضافة الطلاب */
+.add-student-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #45a049;
+}
+
+/* تنسيق عنوان جدول الحضور */
+.attendance-title {
+  text-align: center;
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* تنسيق جدول الحضور */
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-table th, .attendance-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.attendance-table th {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.attendance-table td {
+  color: #555;
+}
+
+/* تنسيق الأزرار لحالة الحضور */
+.status-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.status-btn.present {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-btn.present:hover {
+  background-color: #45a049;
+}
+
+.status-btn.absent {
+  background-color: #f44336;
+  color: white;
+}
+
+.status-btn.absent:hover {
+  background-color: #e53935;
+}

@@ -1,0 +1,136 @@
+.creat_post{
+    width: 82%;
+    display: block;
+    padding: 20px;
+    margin-right: 210px;
+}
+
+.creat_post form{
+    display: grid;
+    border: 1px rgba(10, 13, 51, .6) solid;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    padding: 40px;
+}
+.creat_post form input
+{
+    margin-bottom: 25px;
+    height: 32px;
+    background: #ffffff;
+    border: 1px solid rgba(10, 13, 51, .6);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.creat_post form textarea{
+    margin-bottom: 35px;
+    height: 242px;
+    background: #ffffff;
+    border: 1px solid rgba(10, 13, 51, .6);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.creat_post form input:active,
+.creat_post form input:hover,
+.creat_post form input:focus{
+    background: rgba(255, 255, 255, 0.85);
+    border-color: green;
+    
+}
+
+
+#display{
+ 
+    padding: 20px;
+    display: grid;
+    border-radius: 5px;
+    /* margin-top: 75px; */
+}
+#display h2{
+    text-decoration: underline;
+}
+#display p{
+
+}
+
+#display #content{
+        background: #e0e0e0;
+    padding: 4px;
+    border: 1px #1f6feb42 solid;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#display div{
+    background-color: #f0f0f0;
+    padding: 11px;
+    border-radius: 16px;
+    margin-bottom: 23px;
+    border: 1px solid rgba(10, 13, 51, .6);
+}
+
+/* الأجهزة الكبيرة */
+/* .creat_post {
+    margin-right: 0;
+} */
+
+/* الأجهزة اللوحية والمتوسطة */
+@media (max-width: 900px) {
+    .creat_post {
+        padding: 15px;
+        margin-right: 106px;
+        
+    }
+
+    #display {
+        padding: 15px;
+    }
+
+    #display div {
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+}
+
+/* الهواتف الذكية */
+@media (max-width: 550px) {
+    .creat_post {
+        margin: 0 auto;
+    }
+    .creat_post h1{
+        font-size: 19px;
+        margin-top: 23px;
+    }
+
+    .creat_post form input,
+    .creat_post form textarea {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    #display {
+        padding: 10px;
+        /* margin-right: 38px; */
+    }
+    #display p{
+        font-size: 10px;
+    }
+    #display #content{
+        background-color: rgb(229, 231, 237);
+    }
+
+    #display div {
+        padding: 5px;
+        margin-bottom: 10px;
+        /* width: 165px; */
+        margin-right: -26px;
+        margin-left: -25px;
+    }
+    .creat_post form{
+        padding: 8px;
+        border: none;
+    }
+}

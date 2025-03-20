@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+.attendance-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    max-width: 900px;
+    background: white;
+    padding: 29px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.title {
+    font-size: 2rem;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.date {
+    font-size: 1.2rem;
+    color: #606770;
+    text-align: center;
+    text-decoration: blink;
+}
+
+
+.password-card {
+    width: 100%;
+    max-width: 320px;
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 8px;
+    align-items: center;
+    margin-right: 228px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.password-card input {
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.submit-button {
+    width: 100%;
+    background: #1877f2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #166fe5;
+}
+
+.attendance-container select{
+    padding: 2px;
+    margin-top: 9px;
+    height: 5vh;
+    background: #1e1e2f;
+    color: white;
+    font-size: 19px;
+    border-radius: 5px;
+    margin-bottom: 0;
+    width: 65%;
+    margin-right: 41px;
+}
+.table-container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    border-collapse: collapse;
+    background: #2c2c3f;
+    color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+table th,
+table td {
+    border: .2px solid #e7e7e7;
+    padding: 4px;
+    text-align: center;
+    font-size: 20px;
+}
+
+table th {
+    background: #1f6feb;
+    color: #fff;
+    font-weight: bold;
+    /* padding: 10px; */
+}
+
+table tr:nth-child(even) {
+    background-color: #1e1e2f;
+}
+#stuts {
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid #1f6feb;
+    background: #000000;
+    color: #fff;
+    width: 62%;
+    text-align: center;
+    font-size: 19px;
+    margin-bottom: 16px;
+    direction: rtl;
+    margin-top: 9px;
+}
+
+.date-picker {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-picker label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.date-picker input[type="date"] {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.date-picker input[type="date"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* تأثيرات الأنيميشن */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeCard {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+/* RESPONSIVE */
+/* أجهزة اللابتوب الصغيرة والأجهزة اللوحية الكبيرة */
+@media (max-width: 900px) {
+    .attendance-container {
+        width: 600px;
+    }
+    .table-container{
+
+    }
+
+    .password-card {
+        max-width: 100%;
+        margin-right: 0;
+    }
+    table th, table td {
+        padding: 8px;
+        padding-left: 177px;
+        font-size: 0.9rem;
+    }
+
+    #stuts {
+        font-size: 1.2rem;
+        width: 155%;
+    }
+}
+
+/* الأجهزة اللوحية والمتوسطة */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    .table-container{
+
+    }
+
+    .password-card {
+        padding: 20px;
+        width: 88%;
+    }
+
+    table {
+        width: 100%;
+    }
+    table th, table td {
+        padding: 8px;
+        padding-left: 171px;
+        font-size: 0.9rem;
+    }
+
+    #stuts {
+        font-size: 1.2rem;
+        width: 257%;
+    }
+}
+
+/* الهواتف الذكية */
+@media (max-width: 550px) {
+    .attendance-container {
+        width: 296px;
+    }
+    .table-container{
+        width: 100%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+    .password-card{
+        width: 84%;
+        box-shadow: none;
+    }
+
+    .password-card input {
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        font-size: 0.9rem;
+    }
+
+    table th, 
+    table td {
+        padding: 8px;
+        padding-left: 71px;
+        font-size: 0.9rem;
+    }
+
+    #stuts {
+        font-size: 1.2rem;
+        width: 155%;
+    }
+    .attendance-container select{
+        font-size: 17px;
+        /* border-radius: 5px; */
+        /* margin-bottom: 0; */
+        width: 86%;
+        margin-right: -6px;
+    }
+}
