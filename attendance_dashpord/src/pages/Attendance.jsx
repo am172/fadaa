@@ -81,7 +81,7 @@ const Attendance = () => {
         }
         setIsLoading(true);
         try {
-            await axios.post("http://localhost:5000/api/attendance", {
+            await axios.post("https://fadaa-2.onrender.com/api/attendance", {
                 date: date,
                 house: selectedHouse.name,
                 students,
