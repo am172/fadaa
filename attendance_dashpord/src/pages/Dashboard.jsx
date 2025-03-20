@@ -9,7 +9,7 @@ const Dashboard = () => {
     const [password, setPassword] = useState("");
     const [isPasswordCorrect, setIsPasswordCorrect] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
-    const [showChangePassword, setShowChangePassword] = useState(false);
+    // const [showChangePassword, setShowChangePassword] = useState(false);
     const [oldPassword, setOldPassword] = useState("");
     const [newPassword, setNewPassword] = useState("");
     const [successMessage, setSuccessMessage] = useState("");
@@ -50,7 +50,7 @@ const Dashboard = () => {
             if (response.data.message === "تم تغيير كلمة السر بنجاح") {
                 setSuccessMessage("تم تغيير كلمة السر بنجاح!");
                 setErrorMessage("");
-                setShowChangePassword(false);
+                
             } else {
                 setErrorMessage("كلمة السر القديمة غير صحيحة");
                 setSuccessMessage("");
@@ -96,10 +96,10 @@ const Dashboard = () => {
                         <Link to="/dashboard/dashbord_Student"> الطلاب</Link>
                         <Link to="/dashboard/StudentAttendance">غياب كل طالب</Link>
                         <button onClick={handleLogout}>تسجيل الخروج</button>
-                        <button onClick={() => setShowChangePassword(true)}>تغيير كلمة السر</button>
+                        <button onClick={() => document.getElementById('change_password').scrollIntoView({ behavior: 'smooth' })}>تغيير كلمة السر</button>
                     </div>
 
-                    {showChangePassword && (
+                    { (
                         <div
                             id="change_password"
                         >
