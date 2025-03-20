@@ -16,7 +16,7 @@ const HouseAttendance = () => {
     // جلب البيوت عند تحميل الصفحة
     useEffect(() => {
         const fetchHouses = async () => {
-            const response = await axios.get("http://localhost:5000/api/attendance/houses");
+            const response = await axios.get("https://fadaa-2.onrender.com/api/attendance/houses");
             setHouses(response.data);
         };
         fetchHouses();
@@ -38,7 +38,7 @@ const HouseAttendance = () => {
         if (selectedHouse) {
             const fetchAttendanceData = async () => {
                 try {
-                    const response = await axios.get(`http://localhost:5000/api/attendance?house=${selectedHouse.name}`);
+                    const response = await axios.get(`hhttps://fadaa-2.onrender.com/api/attendance?house=${selectedHouse.name}`);
                     const attendanceData = response.data.find(item => item.house === selectedHouse.name);  // ابحث عن البيت المحدد
                     
                     // تحقق من البيانات التي تم جلبها
