@@ -16,7 +16,7 @@ const DashbordStudent = () => {
     const [editingStudent, setEditingStudent] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:5000/students/stats")
+        fetch("https://fadaa-2.onrender.com/students/stats")
             .then(res => res.json())
             .then(data => setStats(data))
             .catch(err => console.error("Error fetching stats:", err));
@@ -57,7 +57,7 @@ const DashbordStudent = () => {
     };
 
     const updateStudent = () => {
-        fetch(`http://localhost:5000/students/${editingStudent._id}`, {
+        fetch(`https://fadaa-2.onrender.com/students/${editingStudent._id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(editingStudent)
