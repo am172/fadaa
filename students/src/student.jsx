@@ -37,7 +37,7 @@ const student = () => {
                     <Link to="/student/students">الطلاب</Link>
                 </li>
                  <li>
-                        <a href="/base.apk" download> <FaDownload/></a>
+                        <a href="/base1.apk" download> <FaDownload/></a>
                     </li>
             </ul>
         </nav>
