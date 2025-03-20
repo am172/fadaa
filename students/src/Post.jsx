@@ -25,7 +25,7 @@ const AdminPosts = () => {
 
     const handleCreatePost = async (e) => {
         e.preventDefault();
-        await fetch('http://localhost:5000/api/posts', {
+        await fetch('https://fadaa-2.onrender.com/api/posts', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newPost)
@@ -90,7 +90,7 @@ const PostsDisplay = () => {
     const [expandedPosts, setExpandedPosts] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/posts')
+        fetch('https://fadaa-2.onrender.com/api/posts')
             .then(res => res.json())
             .then(data => setPosts(data))
             .catch(err => console.error(err));
