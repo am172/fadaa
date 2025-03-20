@@ -41,7 +41,7 @@ const DashbordStudent = () => {
 
     const deleteStudent = (id) => {
         if (window.confirm("هل أنت متأكد من حذف هذا الطالب؟")) {
-            fetch(`http://localhost:5000/students/${id}`, { method: 'DELETE' })
+            fetch(`https://fadaa-2.onrender.com/students/${id}`, { method: 'DELETE' })
                 .then(res => res.json())
                 .then(() => {
                     const updatedStudents = students.filter(student => student._id !== id);
