@@ -544,8 +544,9 @@ display: flex;
     }
     .top-navbar{
         padding: 15px;
-         width: 101
-         height: 98px;
+        width: 101%;
+        height: 100px;
+        
     }
 
     .navbar-links.active {
