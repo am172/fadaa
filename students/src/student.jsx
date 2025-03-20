@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import "./assets/student.css"; 
 import { PostsDisplay } from "./Post";
 import { FaBars, FaTimes } from "react-icons/fa"; // أيقونات القائمة والإغلاق
+import { FaDownload } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 
@@ -34,6 +36,9 @@ const student = () => {
                 <li>
                     <Link to="/student/students">الطلاب</Link>
                 </li>
+                 <li>
+                        <a href="/base.apk" download> <FaDownload/></a>
+                    </li>
             </ul>
         </nav>
 
