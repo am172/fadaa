@@ -12,6 +12,12 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.app{
+    font-size: 50px;
+    color: #000;
+    padding: 1px;
+    
+}
 
 .title {
     font-size: 2rem;
