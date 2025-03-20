@@ -28,7 +28,7 @@ function Signup() {
             return;
         }
 
-        axios.post('http://localhost:5000/register', { name, password, faculty, phone, city, year, id })
+        axios.post('https://fadaa-2.onrender.com/register', { name, password, faculty, phone, city, year, id })
             .then(result => {
                 console.log(result);
                 toast.success("تم تسجيل الحساب بنجاح!", {
