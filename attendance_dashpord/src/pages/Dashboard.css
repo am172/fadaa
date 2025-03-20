@@ -172,17 +172,16 @@ select{
 }
 
 #change_password{
-    border: #c82333 solid 1px;
-    width: 80%;
-    background: #f0f0f0;
+      border: #c82333 solid 1px;
+    width: 50%;
+    background: #022f5c7f;
     text-align: center;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.80);
     border-radius: 8px;
     padding: 20px;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    margin-right: -96%;
-    margin-left: 34px;
-    margin-bottom: 400px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    margin-right: 33%;
     }
 
 /* RESPONSIVE */
@@ -303,17 +302,9 @@ select{
     border-collapse: collapse;
     margin-right: -25px;
     }
-    #change_password{
-    border: #c82333 solid 1px;
+   #change_password{
     width: 61%;
-    background: #f0f0f0;
-    text-align: center;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.80);
-    border-radius: 8px;
-    padding: 20px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    margin-right: -96%;
-    margin-left: 34px;
-    margin-bottom: 400px;
+    margin-right: 14%;
+   
     }
 }
