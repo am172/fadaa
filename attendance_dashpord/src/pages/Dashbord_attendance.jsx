@@ -15,7 +15,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchRecords = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/api/attendance");
+                const response = await axios.get("https://fadaa-2.onrender.com/api/attendance");
                 setAttendanceRecords(response.data);
             } catch (error) {
                 console.error("خطأ في جلب البيانات", error);
