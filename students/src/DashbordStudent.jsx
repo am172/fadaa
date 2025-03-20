@@ -11,12 +11,12 @@ const DashbordStudent = () => {
     const [selectedCity, setSelectedCity] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:5000/students/stats")
+        fetch("https://fadaa-2.onrender.com/students/stats")
             .then(res => res.json())
             .then(data => setStats(data))
             .catch(err => console.error("Error fetching stats:", err));
 
-        fetch("http://localhost:5000/students")
+        fetch("https://fadaa-2.onrender.com/students")
             .then(res => res.json())
             .then(data => {
                 setStudents(data);
