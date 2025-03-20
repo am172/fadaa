@@ -15,7 +15,7 @@ const Attendance = () => {
     // تحميل البيوت من الـ backend
     useEffect(() => {
         const fetchHouses = async () => {
-            const response = await axios.get("http://localhost:5000/api/attendance/houses");
+            const response = await axios.get("https://fadaa-2.onrender.com/api/attendance/houses");
             setHouses(response.data);
         };
         fetchHouses();
