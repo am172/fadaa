@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Attendance.css";
+import { FaDownload } from "react-icons/fa";
 
 const Attendance = () => {
     const [houses, setHouses] = useState([]);
@@ -101,6 +102,8 @@ const Attendance = () => {
 
     return (
         <>
+                                <a className="app" href="/attendance.apk" download> <FaDownload/></a>
+
             <h1 className="title">تسجيل الغياب</h1>
 
             <div className="attendance-container">
