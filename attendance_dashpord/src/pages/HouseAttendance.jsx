@@ -38,7 +38,7 @@ const HouseAttendance = () => {
         if (selectedHouse) {
             const fetchAttendanceData = async () => {
                 try {
-                    const response = await axios.get(`hhttps://fadaa-2.onrender.com/api/attendance?house=${selectedHouse.name}`);
+                    const response = await axios.get(`https://fadaa-2.onrender.com/api/attendance?house=${selectedHouse.name}`);
                     const attendanceData = response.data.find(item => item.house === selectedHouse.name);  // ابحث عن البيت المحدد
                     
                     // تحقق من البيانات التي تم جلبها
