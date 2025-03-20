@@ -19,7 +19,7 @@ const AdminPosts = () => {
 
     // جلب المنشورات من الخادم
     useEffect(() => {
-        fetch('http://localhost:5000/api/posts')
+        fetch('https://fadaa-2.onrender.com/api/posts')
             .then(res => res.json())
             .then(data => setPosts(data))
             .catch(err => console.error(err));
@@ -29,7 +29,7 @@ const AdminPosts = () => {
     const handleCreatePost = async (e) => {
         e.preventDefault();
 
-        await fetch('hhttps://fadaa-2.onrender.com/api/posts', {
+        await fetch('https://fadaa-2.onrender.com/api/posts', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -56,7 +56,7 @@ const AdminPosts = () => {
     const handleDeletePost = async (id) => {
         const isConfirmed = window.confirm("هل أنت متأكد من الحذف؟ لا يمكن التراجع عن هذا الإجراء.");
         if (isConfirmed) {
-            await fetch(`http://localhost:5000/api/posts/${id}`, { method: 'DELETE' });
+            await fetch(`https://fadaa-2.onrender.com/api/posts/${id}`, { method: 'DELETE' });
             setPosts(posts.filter(post => post._id !== id));
         }
     };
