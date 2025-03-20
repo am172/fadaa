@@ -23,7 +23,7 @@ const Dashboard = () => {
 
     const handlePasswordSubmit = async () => {
         try {
-            const response = await axios.post("http://localhost:5000/api/check-password", { password });
+            const response = await axios.post("https://fadaa-2.onrender.com/api/check-password", { password });
             if (response.data.message === "كلمة السر صحيحة") {
                 setIsPasswordCorrect(true);
                 localStorage.setItem("isLoggedIn", "true");
@@ -42,7 +42,7 @@ const Dashboard = () => {
 
     const handleChangePassword = async () => {
         try {
-            const response = await axios.post("http://localhost:5000/api/change-password", {
+            const response = await axios.post("https://fadaa-2.onrender.com/api/change-password", {
                 oldPassword,
                 newPassword
             });
