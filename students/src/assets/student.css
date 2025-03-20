@@ -58,10 +58,12 @@
     cursor: pointer;
 }
 
+
 .content{
-    margin-top: 73px;
+    margin-top: 108px;
     padding: 24px;
 }
+
 /* تصميم متجاوب */
 @media (max-width: 768px) {
     .navbar-links {
