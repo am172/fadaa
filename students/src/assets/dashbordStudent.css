@@ -79,6 +79,7 @@ tbody tr:hover {
     padding: 8px;
     border: 2px solid black;
     border-radius: 5px;
+        margin-top: 90px;
     font-size: 1rem;
 }
 
