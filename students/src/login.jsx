@@ -18,7 +18,7 @@ function Login() {
             return;
         }
 
-        axios.post('http://localhost:5000/login', { name, password })
+        axios.post('https://fadaa-2.onrender.com/login', { name, password })
             .then(result => {
                 if (result.data.message === "Success") {
                     window.location.href = "/student";
