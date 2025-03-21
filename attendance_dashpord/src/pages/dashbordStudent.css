@@ -22,10 +22,22 @@ margin-bottom: 31px;
 
 .filters {
     display: flex;
-    gap: 10px;
     margin-bottom: 15px;
 }
 
+.selected{
+    background-color: #ee000000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* #filter{
+    display: grid
+    ;
+        width: 11%;
+        /* grid-template-columns: repeat(4, 1fr); */
+       
+  
 .filters input, .filters select {
     padding: 8px;
     border: 2px solid black;
@@ -35,7 +47,7 @@ margin-bottom: 31px;
 .filters input{
     height: 10px;
     margin-top: 18px;
-    background: #d7d4de73;
+    background: #ffffff;
 }
 
 #btn__edit{
@@ -60,12 +72,10 @@ h2 {
     text-align: center;
 }
 
-
-
 .modal {
-        margin-top: -50%;
-    border: #c82333 solid 1px;
-    width: 56%;
+    margin-top: -1374px;
+    border: #c82333 solid 1px;      
+    width: 56%;                     
     background: #f0f0f0;
     text-align: center;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.80);
@@ -120,19 +130,65 @@ button:nth-of-type(2):hover {
     background-color: #c82333;
 }
 
-
-
+/* #by__{
+    margin-top: 20px;
+    margin-left: 20px;
+   
+} */
 /* RESPONSIVE  */
 @media (max-width: 900px) {
-
+    .selected{
+        
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        margin-bottom: 50px;
+        width: 41%;
+    
+    }
+    .filters input{
+        margin-right: 61px;
+    
+    }
+    #tabble{
+        margin-left: -49px;
+    }
+    .stats {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 /* الأجهزة اللوحية والمتوسطة */
 @media (max-width: 768px) {
+    .selected{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        margin-bottom: 50px;
+        width: 41%;
+    
+    }
+    .filters input{
+        margin-right: 61px;
+    
+    }
+    #tabble{
+        margin-left: -49px;
+    }
+
 }
 
 /* الهواتف الذكية */
 @media (max-width: 550px) {
+    .selected{
+        
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+        margin-bottom: 50px;
+        width: 100%;
+    
+    }
     #btn__edit, #btn__delete{
         padding: 0;
         font-size: 11px;
@@ -141,7 +197,7 @@ button:nth-of-type(2):hover {
     .filters input, .filters select{
         font-size: 13px;
         padding: 0;
-        
+        margin-bottom: -62px;
     
     }
     .filters input{
@@ -150,10 +206,11 @@ button:nth-of-type(2):hover {
         margin-right: 5px;
         background: #d7d4de73;
     }
-/*     .modal{
-        margin-top: -517px;
-    } */
+    .modal{
+        margin-top: 242px;
+    }
     .stats div{
         margin: 20px;
     }
 }
+
