@@ -174,7 +174,7 @@ select{
 
 #change_password{
     border: #c82333 solid 1px;
-    width: 50%;
+    width: 70%;
     background: #022f5c7f;
     text-align: center;
     border-radius: 8px;
@@ -182,13 +182,32 @@ select{
     transition: transform 0.3s ease, opacity 0.3s ease;
     margin: 0 auto;
     margin-bottom: 45px;
-    margin-right: 33%;
+    margin: 0 auto;
     }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-    .container {
+    .houseContainer{
         width: 100%;
+        margin-bottom: 39px;
+        padding: 2px 14px;
+        border: 1px solid #1f6feb33;
+        border-radius: 8px;
+        background-color: #ffffff;
+    }
+    select{
+    margin-top: 76px;
+    height: 5vh;
+    background: #1e1e2f;
+    color: white;
+    font-size: 19px;
+    border-radius: 5px;
+    margin-bottom: 0;
+    width: 100%;
+    margin-right: 0;
+    }
+    .container {
+        width: 95%;
         padding: 20px;
         background: none;
         box-shadow: none;
@@ -212,6 +231,14 @@ select{
 
 /* الأجهزة اللوحية والمتوسطة */
 @media (max-width: 768px) {
+    .houseContainer{
+        width: 100%;
+        margin-bottom: 39px;
+        /* padding: 2px 14px; */
+        border: 1px solid #1f6feb33;
+        border-radius: 8px;
+        background-color: #ffffff;
+    }
     .container {
         width: 90%;
         padding: 20px;
@@ -290,13 +317,16 @@ select{
         margin-right: 7px;
     }
     .houseContainer{
-        width: 81%;
+    width: 81%;
     margin-bottom: 28px;
-    /* padding: 14px; */
-    border: 1px solid #1f6feb33;
+    padding: 14px;
+    border: none;
     border-radius: 8px;
-    background-color: #eee;
+    background-color: #eeeeee00;
+    margin: 0 auto;
+    margin-bottom: 40px;
     }
+
     #attendand{
         width: 116%;
     border-collapse: collapse;
