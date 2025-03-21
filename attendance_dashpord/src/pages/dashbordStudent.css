@@ -22,32 +22,29 @@ margin-bottom: 31px;
 
 .filters {
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .selected{
-    background-color: #ee000000;
+    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-/* #filter{
-    display: grid
-    ;
-        width: 11%;
-        /* grid-template-columns: repeat(4, 1fr); */
-       
-  
 .filters input, .filters select {
     padding: 8px;
-    border: 2px solid black;
-    border-radius: 5px;
+    background: #ffffff;
+    border: .5px solid #1570e67a;
+    border-radius: 4px;
     font-size: 1rem;
+    color: black;
 }
 .filters input{
-    height: 10px;
+    height: 13px;
     margin-top: 18px;
     background: #ffffff;
+    border: .1px solid #1877f2;
+    border-radius: 4px;
 }
 
 #btn__edit{
@@ -73,7 +70,7 @@ h2 {
 }
 
 .modal {
-    margin-top: -1038px;
+    margin-top: -1374px;
     border: #c82333 solid 1px;      
     width: 56%;                     
     background: #f0f0f0;
@@ -102,6 +99,7 @@ h2 {
     border-color: #007bff;
     outline: none;
 }
+
 
 
 button {
@@ -142,16 +140,28 @@ button:nth-of-type(2):hover {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 5px;
-        margin-bottom: 50px;
+        margin-bottom: 49px;
         width: 41%;
+        margin-top: 78px;
+    
+    }
+    .filters input, .filters select{
+        font-size: 15px;
+        padding: 0;
+        margin-bottom: -11px;
+        color: black;
+        height: 30px;
     
     }
     .filters input{
-        margin-right: 61px;
-    
-    }
-    #tabble{
-        margin-left: -49px;
+        height: 28px;
+        width: 35%;
+        margin-top: 83px;
+        margin-right: 35px;
+        background: #f0f0f0f0;
+        border: .1px solid #1877f2;
+        padding: 7px;
+        
     }
     .stats {
         grid-template-columns: repeat(1, 1fr);
@@ -168,18 +178,30 @@ button:nth-of-type(2):hover {
         width: 41%;
     
     }
-    .filters input{
-        margin-right: 61px;
+    .filters input, .filters select{
+        font-size: 12px;
+        padding: 0;
+        margin-bottom: -62px;
+        color: black;
     
     }
-    #tabble{
-        margin-left: -49px;
+    .filters input{
+        height: 10px;
+        width: 50%;
+        margin-top: 72px;
+        margin-right: 5px;
+        background: #f0f0f0f0;
+        border: .1px solid #1877f2;
+
+        padding: 5px;
     }
+   
 
 }
 
 /* الهواتف الذكية */
 @media (max-width: 550px) {
+   
     .selected{
         
         display: grid;
@@ -195,22 +217,31 @@ button:nth-of-type(2):hover {
     }
 
     .filters input, .filters select{
-        font-size: 13px;
+        font-size: 12px;
         padding: 0;
         margin-bottom: -62px;
+        color: black;
     
     }
     .filters input{
         height: 10px;
-        margin-top: 76px;
+        width: 50%;
+        margin-top: 72px;
         margin-right: 5px;
-        background: #d7d4de73;
+        background: #f0f0f0f0;
+        border: .1px solid #1877f2;
+
+        padding: 5px;
     }
     .modal{
-    margin-top: -308px;
+        margin-top: 242px;
     }
     .stats div{
         margin: 20px;
     }
+    .hh{
+        font-size: 1rem;
+    }
 }
+
 
