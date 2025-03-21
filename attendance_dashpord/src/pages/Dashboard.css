@@ -171,8 +171,9 @@ select{
     background-color: #d32f2f;
 }
 
+
 #change_password{
-      border: #c82333 solid 1px;
+    border: #c82333 solid 1px;
     width: 50%;
     background: #022f5c7f;
     text-align: center;
@@ -185,7 +186,6 @@ select{
     }
 
 /* RESPONSIVE */
-/* أجهزة اللابتوب الصغيرة والأجهزة اللوحية الكبيرة */
 @media (max-width: 900px) {
     .container {
         width: 100%;
@@ -201,7 +201,7 @@ select{
     table th, table td {
        
         padding-left: 0px;
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     #stuts {
@@ -302,7 +302,7 @@ select{
     border-collapse: collapse;
     margin-right: -25px;
     }
-   #change_password{
+    #change_password{
     width: 61%;
     margin-right: 14%;
    
