@@ -1,6 +1,6 @@
 .student-attendance-container {
     text-align: center;
-    padding: 77px;
+    /* padding: 77px; */
     direction: rtl;
     width: 761px;
 }
@@ -98,6 +98,10 @@
 
 /* RESPONSIVE  */
 @media (max-width: 900px) {
+    .student-attendance-container table th,
+    .student-attendance-container table td {
+        padding-left: 0;
+    }
     .sidebar{
         position: fixed;
         top: 0;
