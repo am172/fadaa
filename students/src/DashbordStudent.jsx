@@ -43,7 +43,7 @@ const DashbordStudent = () => {
         setFilteredStudents(filteredData);
     }, [searchTerm, selectedFaculty, selectedCity, students]);
 
-    return (
+   return (
 
         <>
 
@@ -116,7 +116,7 @@ const DashbordStudent = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredStudents.length > 0 ? (
+                        {(
                             filteredStudents.map((student, index) => (
                                 <tr key={index} className="text-center">
                                     <td className="border p-2">{student.name}</td>
@@ -126,10 +126,6 @@ const DashbordStudent = () => {
                                     <td className="border p-2">{student.phone}</td>
                                 </tr>
                             ))
-                        ) : (
-                            <tr>
-                                <td colSpan="6" className="text-center p-4">لا توجد بيانات</td>
-                            </tr>
                         )}
                     </tbody>
                 </table>
