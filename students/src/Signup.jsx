@@ -1,4 +1,4 @@
-import { useState } from 'react';
+         import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -15,10 +15,11 @@ function Signup() {
     const [city, setCity] = useState("");
     const [year, setYear] = useState("");
     const [id, setId] = useState("");
+    const [isLoading, setIsLoading] = useState(false); // حالة جديدة لتتبع التحميل
 
     const navigate = useNavigate();
 
-    const allowedIds = ["12345", "67890", "54321", "09876"]; 
+    const allowedIds = ["12345", "67890", "54321", "09876"];
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,6 +28,8 @@ function Signup() {
             toast.error("الـ ID غير صحيح، يرجى التحقق منه!");
             return;
         }
+
+        setIsLoading(true); // تعيين حالة التحميل إلى true
 
         axios.post('https://fadaa-2.onrender.com/register', { name, password, faculty, phone, city, year, id })
             .then(result => {
@@ -40,6 +43,9 @@ function Signup() {
             .catch(err => {
                 console.log(err);
                 toast.error("حدث خطأ أثناء التسجيل، حاول مرة أخرى");
+            })
+            .finally(() => {
+                setIsLoading(false); // إعادة تعيين حالة التحميل إلى false بعد اكتمال العملية
             });
     };
 
@@ -172,8 +178,8 @@ function Signup() {
                         </select>
                     </div>
                     <br />
-                    <button type="submit" className="btn" id='submit'>
-                        تسجيل
+                    <button type="submit" className="btn" id='submit' disabled={isLoading}>
+                        {isLoading ? "جاري التسجيل..." : "تسجيل"}
                     </button>
                 </form>
             </div>
