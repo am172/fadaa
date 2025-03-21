@@ -99,34 +99,26 @@
 /* RESPONSIVE  */
 @media (max-width: 900px) {
     .sidebar{
-        width: 75px;
-        height: -webkit-fill-available;
-        /* display: none; */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 60px;
+        padding: 0 19px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 17px;
     }
     .sidebar a, .sidebar button {
-        font-size: 14px;
-        width: 104px;
-        margin-right: -14px;
+        font-size: 19px;
+        width: max-content;
+        padding: 4px;
     }
 }
 
 /* الأجهزة اللوحية والمتوسطة */
 @media (max-width: 768px) {
     .sidebar{
-        width: 45px;
-        height: -webkit-fill-available;
-        /* display: none; */
-    }
-    .sidebar a, .sidebar button {
-        font-size: 9px;
-        width: 74px;
-    margin-right: -14px;
-    }
-}
-
-/* الهواتف الذكية */
-@media (max-width: 550px) {
-     .sidebar{
         position: fixed;
         top: 0;
         right: 0;
@@ -142,7 +134,41 @@
         width: max-content;
         padding: 4px;
     }
-    
+    /* .filters input, .filters select {
+        margin-right: -20px;
+    margin-left: -9px;
+    width: 58%;
+    font-size: 14px;
+    } */
+    /* table{
+        margin-right: -20px;
+    margin-left: -9px;
+    width: 58%;
+    font-size: 14px;
+    } */
+}
+
+/* الهواتف الذكية */
+@media (max-width: 550px) {
+    .dashboard-container {
+        overflow: hidden;
+    }
+    .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 60px;
+        padding: 0 19px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 17px;
+    }
+    .sidebar a, .sidebar button {
+        font-size: 10px;
+        width: max-content;
+        padding: 4px;
+    }
     .student-attendance-container {
         text-align: center;
         /* padding: 77px; */
@@ -153,3 +179,4 @@
     }
    
 }
+
