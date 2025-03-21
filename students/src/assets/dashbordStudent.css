@@ -1,5 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Arima:wght@100..700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');.login-container { */
-
 /* تنسيق عام للصفحة */
 body {
     font-family: "Alexandria", sans-serif;
@@ -20,10 +18,11 @@ body {
 }
 
 /* تحسين عرض الإحصائيات */
-.hh{
-margin-top: 155px;
-margin-bottom: 31px;
+.hh {
+    margin-top: 155px;
+    margin-bottom: 31px;
 }
+
 .stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -73,26 +72,73 @@ tbody tr:hover {
     display: flex;
     gap: 10px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
+    margin-top: 100px;
 }
 
 .filters input, .filters select {
     padding: 8px;
     border: 2px solid black;
     border-radius: 5px;
-        margin-top: 90px;
     font-size: 1rem;
+    flex: 1 1 200px;
 }
-
-
 
 /* الأجهزة اللوحية والمتوسطة */
 @media (max-width: 768px) {
-   
+    .dashboard-container {
+        padding: 15px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters input, .filters select {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 8px;
+    }
 }
 
 /* الهواتف الذكية */
 @media (max-width: 550px) {
-    .p-2 {
-        padding: .1rem;
+    .p-2{
+        font-size: 9px;
+    }
+    .dashboard-container {
+        padding: 10px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .hh {
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+
+    .filters input, .filters select {
+        font-size: 0.9rem;
     }
 }
