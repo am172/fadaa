@@ -103,7 +103,7 @@ const DashbordStudent = () => {
                             <th className="border p-2">الكلية</th>
                             <th className="border p-2">السنة</th>
                             <th className="border p-2">المحافظة</th>
-                            <th className="border p-2">الفريق</th>
+{/*                             <th className="border p-2">الفريق</th> */}
                             <th className="border p-2">رقم الهاتف</th>
                             <th className="border p-2">تعديل</th>
                             <th className="border p-2">حذف</th>
@@ -116,7 +116,7 @@ const DashbordStudent = () => {
                                 <td className="border p-2">{student.faculty}</td>
                                 <td className="border p-2">{student.year}</td>
                                 <td className="border p-2">{student.city}</td>
-                                <td className="border p-2">{student.team}</td>
+{/*                                 <td className="border p-2">{student.team}</td> */}
                                 <td className="border p-2">{student.phone}</td>
                                 <td className="border p-2">
                                     <button id="btn__edit" onClick={() => setEditingStudent(student)}><FaEdit /></button>
@@ -142,7 +142,7 @@ const DashbordStudent = () => {
                                 <th className="border p-2">الكلية</th>
                                 <th className="border p-2">السنة</th>
                                 <th className="border p-2">المحافظة</th>
-                                <th className="border p-2">الفريق</th>
+{/*                                 <th className="border p-2">الفريق</th> */}
                                 <th className="border p-2">رقم الهاتف</th>
                                 <th className="border p-2">تعديل</th>
                                 <th className="border p-2">حذف</th>
@@ -155,7 +155,7 @@ const DashbordStudent = () => {
                                     <td className="border p-2">{student.faculty}</td>
                                     <td className="border p-2">{student.year}</td>
                                     <td className="border p-2">{student.city}</td>
-                                    <td className="border p-2">{student.team}</td>
+{/*                                     <td className="border p-2">{student.team}</td> */}
                                     <td className="border p-2">{student.phone}</td>
                                     <td className="border p-2">
                                         <button id="btn__edit" onClick={() => setEditingStudent(student)}><FaEdit /></button>
