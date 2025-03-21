@@ -64,13 +64,6 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-#display div{
-    background-color: #f0f0f0;
-    padding: 11px;
-    border-radius: 16px;
-    margin-bottom: 23px;
-    border: 1px solid rgba(10, 13, 51, .6);
-}
 
 /* الأجهزة الكبيرة */
 /* .creat_post {
@@ -81,17 +74,33 @@
 @media (max-width: 900px) {
     .creat_post {
         padding: 15px;
-        margin-right: 106px;
-        
+        margin: 0 auto;
+        margin-top: 43px;
     }
 
     #display {
         padding: 15px;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    #display h1 {
+        font-size: 1.8rem;
+    }
+
+    #display h2 {
+        font-size: 1.3rem;
+    }
+
+    #display p {
+        font-size: 0.9rem;
     }
 
     #display div {
-        padding: 8px;
-        margin-bottom: 15px;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px #3c3b3b solid;
+        background: #eeeeee;
+        border-radius: 8px;
     }
 }
 
@@ -110,27 +119,35 @@
         font-size: 1rem;
         padding: 8px;
     }
-
     #display {
         padding: 10px;
-        /* margin-right: 38px; */
+        grid-template-columns: 1fr;
     }
-    #display p{
-        font-size: 10px;
+
+    #display h1 {
+        font-size: 1.5rem;
     }
-    #display #content{
-        background-color: rgb(229, 231, 237);
+
+    #display h2 {
+        font-size: 1.2rem;
+    }
+
+    #display p {
+        font-size: 0.8rem;
     }
 
     #display div {
-        padding: 5px;
+        padding: 10px;
         margin-bottom: 10px;
-        /* width: 165px; */
-        margin-right: -26px;
-        margin-left: -25px;
+    }
+
+    #display button {
+        padding: 3px 7px;
+        font-size: 0.6rem;
     }
     .creat_post form{
         padding: 8px;
         border: none;
     }
 }
+
