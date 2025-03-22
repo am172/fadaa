@@ -154,9 +154,11 @@ form{
 }
 .sa7by2{
     display: none;
+    text-align: center;
 }
 .sa7by2 .link-btn{
-    color: #2d3e50;
+    color: #ecf5ff;
+    background: #4caf50;
 }
 
 /* الأجهزة اللوحية والمتوسطة */
