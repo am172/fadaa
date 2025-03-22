@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./assets/dashbordStudent.css";
 import NavBAR from "./compontets/navBar";
-import { FaBars, FaTimes } from "react-icons/fa"; 
-import { Link } from "react-router-dom";
-import { FaDownload } from "react-icons/fa";
+
 
 const DashbordStudent = () => {
     const [stats, setStats] = useState(null);
@@ -13,11 +11,7 @@ const DashbordStudent = () => {
     const [selectedFaculty, setSelectedFaculty] = useState("");
     const [selectedCity, setSelectedCity] = useState("");
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false); 
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen); 
-    };
+    
 
     useEffect(() => {
         fetch("https://fadaa-2.onrender.com/students/stats")
@@ -25,7 +19,7 @@ const DashbordStudent = () => {
             .then(data => setStats(data))
             .catch(err => console.error("Error fetching stats:", err));
 
-        fetch("http://localhost:5000/students")
+        fetch("https://fadaa-2.onrender.com/students")
             .then(res => res.json())
             .then(data => {
                 setStudents(data);
@@ -43,33 +37,11 @@ const DashbordStudent = () => {
         setFilteredStudents(filteredData);
     }, [searchTerm, selectedFaculty, selectedCity, students]);
 
-   return (
+    return (
 
         <>
 
-            <nav className="top-navbar">
-                <div className="navbar-logo">جمعية فضاء</div>
-
-                <div className="menu-icon" onClick={toggleMenu}>
-                    {isMenuOpen ? <FaTimes /> : <FaBars />}
-                </div>
-
-                <ul className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
-                    <li>
-                        <Link to="/student/news">أخر الأخبار</Link>
-                    </li>
-                    <li>
-                        <Link to="/student/houses">البيوت</Link>
-                    </li>
-                    <li>
-                        <Link to="/student/students">الطلاب</Link>
-                    </li>
-                    <li>
-                        <a href="/base.apk" download> <FaDownload /></a>
-                    </li>
-
-                </ul>
-            </nav>
+            <NavBAR/>
             <div className="dashboard-container p-4">
 
 
@@ -116,7 +88,7 @@ const DashbordStudent = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {(
+                        {filteredStudents.length > 0 ? (
                             filteredStudents.map((student, index) => (
                                 <tr key={index} className="text-center">
                                     <td className="border p-2">{student.name}</td>
@@ -126,6 +98,10 @@ const DashbordStudent = () => {
                                     <td className="border p-2">{student.phone}</td>
                                 </tr>
                             ))
+                        ) : (
+                            <tr>
+                                <td colSpan="6" className="text-center p-4">لا توجد بيانات</td>
+                            </tr>
                         )}
                     </tbody>
                 </table>
