@@ -137,16 +137,17 @@ button:nth-of-type(2):hover {
 @media (max-width: 900px) {
     .selected{
         
+/*         grid-gap: 5px; */
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
         gap: 5px;
+        grid-template-columns: repeat(2, 1fr);
         margin-bottom: 49px;
-        width: 41%;
         margin-top: 78px;
+        width: 51%;
     
     }
     .filters input, .filters select{
-        font-size: 15px;
+        font-size: 19px;
         padding: 0;
         margin-bottom: -65px;
         color: black;
