@@ -61,6 +61,15 @@
     padding: 4px;
     border: 1px #1f6feb42 solid;
     border-radius: 6px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#display div{
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 49px;
+    border: solid .1px #1877f2;
+    border-radius: 6px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -139,6 +148,7 @@
     #display div {
         padding: 10px;
         margin-bottom: 10px;
+        
     }
 
     #display button {
