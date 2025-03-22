@@ -173,17 +173,19 @@ select{
 
 
 #change_password{
-    border: #c82333 solid 1px;
-    width: 70%;
-    background: #022f5c7f;
+    border: #1877f2 solid 1px;
+    width: 62%;
+    background: #ffffff;
     text-align: center;
     border-radius: 8px;
     padding: 20px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     margin: 0 auto;
     margin-bottom: 45px;
-    margin: 0 auto;
-    }
+    margin: 19px 316px;
+    box-shadow: 0 0 10px 15px rgba(0, 0, 0, 0.1);
+
+}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -227,6 +229,20 @@ select{
         font-size: 1.2rem;
         width: 155%;
     }
+    #change_password {
+        border: #1877f2 solid 1px;
+        width: 56%;
+        background: #ffffff;
+        text-align: center;
+        border-radius: 8px;
+        padding: 20px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        margin: 0 auto;
+        margin-bottom: 45px;
+        margin: 19px 316px;
+        margin: 0 auto;
+        box-shadow: 0 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
 }
 
 /* الأجهزة اللوحية والمتوسطة */
@@ -243,8 +259,19 @@ select{
         width: 90%;
         padding: 20px;
     }
-    .table-container{
-
+    #change_password {
+        border: #1877f2 solid 1px;
+        width: 56%;
+        background: #ffffff;
+        text-align: center;
+        border-radius: 8px;
+        padding: 20px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        margin: 0 auto;
+        margin-bottom: 45px;
+        margin: 19px 316px;
+        margin: 0 auto;
+        box-shadow: 0 0 10px 15px rgba(0, 0, 0, 0.1);
     }
 
     .password-card {
@@ -338,3 +365,4 @@ select{
    
     }
 }
+
