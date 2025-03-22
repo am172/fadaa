@@ -166,7 +166,7 @@
         padding: 0 19px;
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        gap: 9px;
+        gap: 4px;
     }
     .sidebar a, .sidebar button {
         font-size: 10px;
