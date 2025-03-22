@@ -253,7 +253,7 @@ table tr:nth-child(even) {
 /* الهواتف الذكية */
 @media (max-width: 550px) {
     .attendance-container {
-        width: 296px;
+        width: 257px;
     }
     .table-container{
         width: 100%;
