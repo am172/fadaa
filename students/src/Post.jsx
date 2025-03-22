@@ -59,8 +59,9 @@ const PostsDisplay = () => {
                 <div key={post._id} id="post-container">
                     <h2 id="title">{post.title}</h2>
 {/*                     <p id="desc">{post.description}</p> */}
-                    <p id="date"> {formatDate(post.createdAt)}</p>
+                    
                     <p id="content">{truncateText(post.content, 100, expandedPosts[post._id])}</p>
+                    <p id="date"> {formatDate(post.createdAt)}</p>
                     {post.content.split(' ').length > 100 && (
                         <button id="more" onClick={() => toggleExpand(post._id)}>
                             {expandedPosts[post._id] ? 'عرض أقل' : 'عرض المزيد'}
