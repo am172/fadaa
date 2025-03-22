@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-
-// import "./assets/student.css"; 
+import "../assets/student.css";
 import { FaBars, FaTimes } from "react-icons/fa"; // أيقونات القائمة والإغلاق
 import { Link } from "react-router-dom";
-
+import { FaDownload } from "react-icons/fa"; 
 
 const NavBAR = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // حالة القائمة
@@ -13,32 +12,30 @@ const NavBAR = () => {
     };
 
     return (
-        <div className="home-container">
             <nav className="top-navbar">
-                <div className="navbar-logo">جمعية فضاء</div>
+                <div className="navbar-logo"> <Link className="navbar-logo" style={{ textDecoration: "none" }} to="/student"> فضاء</Link> </div>
 
-                {/* أيقونة القائمة */}
                 <div className="menu-icon" onClick={toggleMenu}>
                     {isMenuOpen ? <FaTimes /> : <FaBars />}
                 </div>
 
-                {/* قوائم النافبار */}
                 <ul className={`navbar-links ${isMenuOpen ? "active" : ""}`}>
-                    <li>
-                        <Link to="/student/news">أخر الأخبار</Link>
-                    </li>
+
                     <li>
                         <Link to="/student/houses">البيوت</Link>
                     </li>
                     <li>
                         <Link to="/student/students">الطلاب</Link>
                     </li>
+                    <li>
+                        <Link to="">مقالات</Link>
+                    </li>
+                    <li>
+                        <a href="/base.apk" download> <FaDownload /></a>
+                    </li>
+
                 </ul>
             </nav>
-
-
-
-        </div>
     );
 };
 
