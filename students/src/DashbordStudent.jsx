@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+
+     import { useEffect, useState } from "react";
 import "./assets/dashbordStudent.css";
 import NavBAR from "./compontets/navBar";
 
@@ -11,7 +12,7 @@ const DashbordStudent = () => {
     const [selectedFaculty, setSelectedFaculty] = useState("");
     const [selectedCity, setSelectedCity] = useState("");
 
-    
+
 
     useEffect(() => {
         fetch("https://fadaa-2.onrender.com/students/stats")
@@ -33,7 +34,9 @@ const DashbordStudent = () => {
             student.name.includes(searchTerm) &&
             (selectedFaculty ? student.faculty === selectedFaculty : true) &&
             (selectedCity ? student.city === selectedCity : true)
+            //   (selectedYear ? student.year === selectedYear : true)
         );
+
         setFilteredStudents(filteredData);
     }, [searchTerm, selectedFaculty, selectedCity, students]);
 
@@ -41,7 +44,7 @@ const DashbordStudent = () => {
 
         <>
 
-            <NavBAR/>
+            <NavBAR />
             <div className="dashboard-container p-4">
 
 
@@ -88,21 +91,16 @@ const DashbordStudent = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredStudents.length > 0 ? (
-                            filteredStudents.map((student, index) => (
-                                <tr key={index} className="text-center">
-                                    <td className="border p-2">{student.name}</td>
-                                    <td className="border p-2">{student.faculty}</td>
-                                    <td className="border p-2">{student.year}</td>
-                                    <td className="border p-2">{student.city}</td>
-                                    <td className="border p-2">{student.phone}</td>
-                                </tr>
-                            ))
-                        ) : (
-                            <tr>
-                                <td colSpan="6" className="text-center p-4">لا توجد بيانات</td>
+                        {students.map((student, index) => (
+                            <tr key={index} className="text-center">
+                                <td className="border p-2">{student.name}</td>
+                                <td className="border p-2">{student.faculty}</td>
+                                <td className="border p-2">{student.year}</td>
+                                <td className="border p-2">{student.city}</td>
+                                {/* <td className="border p-2">{student.team}</td> */}
+                                <td className="border p-2">{student.phone}</td>
                             </tr>
-                        )}
+                        ))}
                     </tbody>
                 </table>
             </div>
