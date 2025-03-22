@@ -279,7 +279,7 @@ select{
     }
 
     table {
-        width: 96%;
+        width: 100%;
     }
     table th, table td {
         padding: 8px;
