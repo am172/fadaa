@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&family=Oi&display=swap');
 /* التنسيق العام */
 body {
     margin: 0;
@@ -34,6 +35,9 @@ body {
 
 /* لوجو الجمعية */
 .navbar-logo {
+    font-family: "Marhey", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 24px;
     font-weight: bold;
     color: #ffffff; /* لون أبيض */
@@ -80,7 +84,7 @@ display: flex;
     align-items: center;
     text-align: center;
     color: white;
-    margin-top: 60px; /* علشان متتغطاش تحت النافبار */
+    margin-top: 42px; /* علشان متتغطاش تحت النافبار */
 }
 
 .hero-content h1 {
@@ -543,9 +547,9 @@ display: flex;
         width: 95%;
     }
     .top-navbar{
-        padding: 15px;
+        padding: 26px;
         width: 101%;
-        height: 100px;
+        height: 57px;
         
     }
 
