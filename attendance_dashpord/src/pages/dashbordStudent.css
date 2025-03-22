@@ -204,10 +204,10 @@ button:nth-of-type(2):hover {
    
     .selected{
         
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 5px;
-        margin-bottom: 50px;
+       display: grid;
+        gap: 4px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 52px;
         width: 100%;
     
     }
@@ -217,10 +217,10 @@ button:nth-of-type(2):hover {
     }
 
     .filters input, .filters select{
-        font-size: 12px;
-        padding: 0;
-        margin-bottom: -62px;
-        color: black;
+        color: #000;
+        font-size: 10px;
+        margin-bottom: -70px;
+        padding: 2px;
     
     }
     .filters input{
