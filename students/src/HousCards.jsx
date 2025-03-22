@@ -1,9 +1,12 @@
 import React from "react";
 import houses from "./data/houses"; // تأكد أن المسار صحيح
 import "./assets/HouseCards.css"; // استيراد ملف التنسيق
+import NavBAR from "./compontets/navBar";
 
 const HousesList = () => {
     return (
+        <>
+        <NavBAR/>
         <div className="container">
             <h1>قائمة المنازل</h1>
             <div className="houses-grid">
@@ -21,6 +24,7 @@ const HousesList = () => {
                 ))}
             </div>
         </div>
+        </>
     );
 };
 
