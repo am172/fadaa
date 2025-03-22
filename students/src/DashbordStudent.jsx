@@ -1,53 +1,53 @@
 
-     import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import "./assets/dashbordStudent.css";
 import NavBAR from "./compontets/navBar";
-
 
 const DashbordStudent = () => {
     const [stats, setStats] = useState(null);
     const [students, setStudents] = useState([]);
-    const [filteredStudents, setFilteredStudents] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedFaculty, setSelectedFaculty] = useState("");
     const [selectedCity, setSelectedCity] = useState("");
-
-
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch("https://fadaa-2.onrender.com/students/stats")
-            .then(res => res.json())
-            .then(data => setStats(data))
-            .catch(err => console.error("Error fetching stats:", err));
+        const fetchData = async () => {
+            try {
+                const statsResponse = await fetch("https://fadaa-2.onrender.com/students/stats");
+                const statsData = await statsResponse.json();
+                setStats(statsData);
 
-        fetch("https://fadaa-2.onrender.com/students")
-            .then(res => res.json())
-            .then(data => {
-                setStudents(data);
-                setFilteredStudents(data);
-            })
-            .catch(err => console.error("Error fetching students:", err));
+                const studentsResponse = await fetch("https://fadaa-2.onrender.com/students");
+                const studentsData = await studentsResponse.json();
+                setStudents(studentsData);
+            } catch (err) {
+                setError("Error fetching data");
+                console.error("Error fetching data:", err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
     }, []);
 
-    useEffect(() => {
-        let filteredData = students.filter(student =>
+    const filteredStudents = useMemo(() => {
+        return students.filter(student =>
             student.name.includes(searchTerm) &&
             (selectedFaculty ? student.faculty === selectedFaculty : true) &&
             (selectedCity ? student.city === selectedCity : true)
-            //   (selectedYear ? student.year === selectedYear : true)
         );
-
-        setFilteredStudents(filteredData);
     }, [searchTerm, selectedFaculty, selectedCity, students]);
 
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>{error}</div>;
+
     return (
-
         <>
-
             <NavBAR />
             <div className="dashboard-container p-4">
-
-
                 {/* حقول الفلترة */}
                 <div className="filters flex gap-4 mb-4">
                     <input
@@ -91,13 +91,12 @@ const DashbordStudent = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {students.map((student, index) => (
+                        {filteredStudents.map((student, index) => (
                             <tr key={index} className="text-center">
                                 <td className="border p-2">{student.name}</td>
                                 <td className="border p-2">{student.faculty}</td>
                                 <td className="border p-2">{student.year}</td>
                                 <td className="border p-2">{student.city}</td>
-                                {/* <td className="border p-2">{student.team}</td> */}
                                 <td className="border p-2">{student.phone}</td>
                             </tr>
                         ))}
@@ -108,4 +107,4 @@ const DashbordStudent = () => {
     );
 };
 
-export default DashbordStudent
+export default DashbordStudent;
