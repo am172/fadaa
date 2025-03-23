@@ -328,6 +328,9 @@ select{
         padding-left: 0px;
         font-size: 8.5px;
     }
+     #tarikh {
+        font-size: 7px;
+    }
 
     #stuts {
         font-size: 1.2rem;
