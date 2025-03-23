@@ -119,7 +119,7 @@ const Dashboard = () => {
                                     <tbody>
                                         {records.map((record, idx) => (
                                             <tr key={idx}>
-                                                <td>{record.date}</td>
+                                                <td id="tarikh">{record.date}</td>
                                                 {record.students.map((student, studentIdx) => (
                                                     <td key={studentIdx}>
                                                         {student.status === "present" ? "✅" : "❌"}
