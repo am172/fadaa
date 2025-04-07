@@ -215,14 +215,14 @@ select{
         box-shadow: none;
     }
 
-    .password-card {
+    .passwordCard {
         max-width: 100%;
         margin-right: 0;
     }
     table th, table td {
        
         padding-left: 0px;
-        font-size: 1.2rem;
+        font-size: 0.9rem;
     }
 
     #stuts {
@@ -274,12 +274,12 @@ select{
         box-shadow: 0 0 10px 15px rgba(0, 0, 0, 0.1);
     }
 
-    .password-card {
+    .passwordCard {
         width: 517px;
     }
 
     table {
-        width: 100%;
+        width: 96%;
     }
     table th, table td {
         padding: 8px;
@@ -309,14 +309,13 @@ select{
 
     .title {
         font-size: 1.5rem;
-        margin-top: -26px;
     }
-    .password-card{
+    .passwordCard{
         width: 84%;
         box-shadow: none;
     }
 
-    .password-card input {
+    .passwordCard input {
         font-size: 0.9rem;
     }
 
@@ -324,12 +323,13 @@ select{
         font-size: 0.9rem;
     }
 
-    table th, table td {
+    table th {
         padding-left: 0px;
-        font-size: 8.5px;
+        font-size: 7.5px;
     }
-     #tarikh {
-        font-size: 7px;
+    table td{
+        padding-left: 0px;
+        font-size: 7.5px;
     }
 
     #stuts {
