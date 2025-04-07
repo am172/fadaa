@@ -80,12 +80,13 @@ select{
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     animation: slideIn 0.6s ease-out;
+    background-color: #eee;
 }
 .passwordCard input {
     width: 100%;
     padding: 7px;
     margin-bottom: 15px;
-    /* background: #d8d8d8; */
+    background: #d8d8d86d;
     border: 1.2px solid #44444463;
     color: #000000;
     border-radius: 8px;
@@ -311,8 +312,10 @@ select{
         font-size: 1.5rem;
     }
     .passwordCard{
-        width: 84%;
-        box-shadow: none;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        width: 346px;
+        padding: 22px;
+        margin-right: -25px;
     }
 
     .passwordCard input {
